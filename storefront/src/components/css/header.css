@@ -1,0 +1,16 @@
+#header {
+  color: #111;
+  background: #f5f5f5;
+  min-height: 64px;
+}
+
+#headerNav {
+  width: 700%;
+  height: 50px;
+  margin: 5px -5px 0px 3px;
+  display: flex;
+  /* border: solid 1px slateblue; */
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}

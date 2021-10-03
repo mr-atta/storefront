@@ -3,13 +3,14 @@ import "./App.css";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Categories from "./components/Categories";
 
 function App() {
   return (
     <div className="App">
       <Header />
 
-      {/* <Categories /> */}
+      <Categories />
       {/* <Products /> */}
 
       <Footer />
