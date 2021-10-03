@@ -1,0 +1,25 @@
+.Categories {
+  margin: 0.5% 0% 0 1.5%;
+}
+
+.oneCategorie {
+  cursor: pointer;
+}
+
+.list-Item {
+  background-color: rgb(242, 240, 255);
+}
+
+.list-Item:hover {
+  background-color: #c7c5c5;
+}
+
+#FOOD:first-child {
+  background-color: #ddbee2;
+}
+#ELECTRONICS:nth-child(2) {
+  background-color: #ddbee2;
+}
+#PHONES:last-child {
+  background-color: #ddbee2;
+}
