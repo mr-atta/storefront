@@ -11,6 +11,13 @@ import { selected } from "../store/products";
 
 import Products from "./Products";
 
+import { Card, Button } from "react-bootstrap";
+import "./css/products.css";
+
+import { defult } from "../store/products";
+
+// console.log(defult);
+
 const Categories = (props) => {
   const { counter, activeOne } = props;
 
@@ -45,13 +52,43 @@ const Categories = (props) => {
           </ListGroup>
         </div>
       </section>
-      {show && (
-        <div id="listShown">
-          <h2>{props.counter.activeCategory.displayName}</h2>
-          <p>{props.counter.activeCategory.description}</p>
+      <br />
 
-          <Products />
+      {/* add  defult productes to show them when visit the App  */}
+      {typeof props.counter.activeCategory.displayName === "undefined" ? (
+        // //////////////////////////////////////////////////////
+        <div className="list">
+          <ListGroup horizontal className="ListGroup">
+            {" "}
+            {defult.map((ele, i) => {
+              return (
+                <Card style={{ width: "18rem" }} className="Card" key={i}>
+                  <Card.Img variant="top" src={ele.img} id="Card.Img" />
+                  <Card.Body>
+                    <Card.Title id="Card.Title">{ele.productName}</Card.Title>
+                    <Card.Text id="Card.price">{ele.price}</Card.Text>
+                    <Card.Text id="Card.description">
+                      {ele.description}
+                    </Card.Text>
+                    {/* <Button variant="primary" id="Card.Button">
+                      ❤
+                    </Button> */}
+                  </Card.Body>
+                </Card>
+              );
+            })}
+          </ListGroup>
         </div>
+      ) : (
+        // /////////////////////////////////////////////////////////////
+        show && (
+          <div id="listShown">
+            <h2>{props.counter.activeCategory.displayName}</h2>
+            <p>{props.counter.activeCategory.description}</p>
+
+            <Products />
+          </div>
+        )
       )}
     </div>
   );

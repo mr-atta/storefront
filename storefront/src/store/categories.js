@@ -46,3 +46,5 @@ export const activeOne = (name) => {
     payload: name,
   };
 };
+
+// export const defult = initialState.categories;
