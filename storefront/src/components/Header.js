@@ -5,25 +5,15 @@ import Link from "@mui/material/Link";
 import HomeIcon from "@mui/icons-material/Home";
 import WhatshotIcon from "@mui/icons-material/Whatshot";
 import GrainIcon from "@mui/icons-material/Grain";
-// import { Button } from "@mui/material";
+import { Button } from "@mui/material";
+
+import { connect } from "react-redux";
 
 import "./css/header.css";
 
-//
-/////////////////////////
-// import { styled } from "@mui/styles";
-// const MyButton = styled(Button)({
-//   background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
-//   border: 0,
-//   borderRadius: 3,
-//   boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
-//   color: "white",
-//   height: 48,
-//   padding: "0 30px",
-// });
-/////////////////////////
+function Header(props) {
+  console.log(props.show);
 
-function Header() {
   const handleClick = () => {};
 
   return (
@@ -46,20 +36,23 @@ function Header() {
             color="inherit"
             href="/getting-started/installation/"
           >
-            <WhatshotIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-            CART(0)
+            {/* <WhatshotIcon sx={{ mr: 0.5 }} fontSize="inherit" /> */}
+            <Button
+              color="inherit"
+              onClick={() => {
+                props.show();
+              }}
+            >
+              CART({props.cart.length})
+            </Button>
           </Link>
         </div>
-
-        {/* <Typography
-          sx={{ display: "flex", alignItems: "center" }}
-          color="text.primary"
-        >
-          <GrainIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-          Breadcrumb
-        </Typography> */}
       </Breadcrumbs>
     </div>
   );
 }
-export default Header;
+function mapStateToProps(state) {
+  return { cart: state.cart };
+}
+
+export default connect(mapStateToProps)(Header);

@@ -12,7 +12,7 @@ function Footer() {
   return (
     <div className="footer-copyright text-center py-3" id="footer">
       <MDBContainer fluid>
-        &copy; {new Date().getFullYear()} Javascript 401
+        &copy;Hands Store {new Date().getFullYear()}
       </MDBContainer>
     </div>
   );
