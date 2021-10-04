@@ -14,7 +14,7 @@ import Products from "./Products";
 const Categories = (props) => {
   const { counter, activeOne } = props;
 
-  console.log(props.counter.activeCategory.displayName);
+  // console.log(props.counter.activeCategory.displayName);
 
   const [show, setShow] = useState(false);
   const handelListClick = (name) => {
