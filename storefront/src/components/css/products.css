@@ -1,0 +1,29 @@
+.Products {
+}
+.list {
+}
+.ListGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.Card {
+}
+
+/* Card */
+
+#Card.Img .card-img,
+.card-img-bottom,
+.card-img-top {
+  width: 100%;
+  height: 200px;
+}
+#Card.Title {
+}
+#Card.price {
+}
+#Card.description {
+}
+#Card.Button {
+}

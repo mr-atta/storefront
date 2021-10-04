@@ -1,5 +1,9 @@
 # Redux
 
+## [Phase 1](https://wizih.csb.app/)
+
+## [Phase 2]()
+
 <br>
 <br>
 
