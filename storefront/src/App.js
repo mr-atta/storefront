@@ -11,13 +11,13 @@ import { useState } from "react";
 function App() {
   const [showCartList, setshowCartList] = useState(false);
 
-  function handleShow() {
+  function show() {
     setshowCartList(!showCartList);
   }
 
   return (
     <div className="App">
-      <Header show={handleShow} />
+      <Header show={show} />
       {showCartList && <Cart />}
 
       <Categories />

@@ -19,7 +19,20 @@ import { defult } from "../store/products";
 // console.log(defult);
 
 const Categories = (props) => {
-  const { counter, activeOne } = props;
+  // const { counter, activeOne, activeCategory } = props;
+
+  // categories
+  console.log(props.counter);
+  console.log(props.counter.categories);
+  console.log(props.counter.activeCategory);
+
+  // products
+  console.log(props.products);
+  console.log(props.products.products);
+  console.log(props.products.selectedProducts);
+
+  // cart
+  console.log(props.cart);
 
   // console.log(props.counter.activeCategory.displayName);
 
@@ -55,6 +68,7 @@ const Categories = (props) => {
       <br />
 
       {/* add  defult productes to show them when visit the App  */}
+
       {typeof props.counter.activeCategory.displayName === "undefined" ? (
         // //////////////////////////////////////////////////////
         <div className="list">
@@ -97,7 +111,12 @@ const Categories = (props) => {
 ///////////////////////////////////////////////////////////////////
 
 const mapStateToProps = (state) => ({
+  // counter: {categories: {…}, products: {…}, cart: Array(0)}
   counter: state.categories,
+  products: state.products,
+  cart: state.cart,
+
+  // activeCategory: state.activeCategory,   // >>>> undefined
 });
 
 const mapDispatchToProps = { activeOne, selected }; // ... + the prodectes

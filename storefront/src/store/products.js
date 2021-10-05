@@ -6,7 +6,7 @@ let initialState = {
       price: "5$",
       category: "FOOD",
       img: "https://assets.bonappetit.com/photos/5d1cb1880813410008e914fc/3:2/w_1997,h_1331,c_limit/Print-Summer-Smash-Burger.jpg",
-      count: 1,
+      count: 5,
     },
     {
       productName: "mansaf",
@@ -14,7 +14,7 @@ let initialState = {
       price: "2$",
       category: "FOOD",
       img: "https://pbs.twimg.com/media/Ec0VN3gXYAIllGt.jpg",
-      count: 1,
+      count: 5,
     },
     {
       productName: "iphone 12",
@@ -22,7 +22,7 @@ let initialState = {
       price: "800$",
       category: "PHONES",
       img: "https://3geeksgadgets.com/wp-content/uploads/2021/06/iphone12prp.jpeg",
-      count: 1,
+      count: 10,
     },
     {
       productName: "iphone 11 pro",
@@ -30,7 +30,7 @@ let initialState = {
       price: "700$",
       category: "PHONES",
       img: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-11-pro-gold-2019?wid=1144&hei=1144&fmt=jpeg&qlt=80&.v=1611101491000",
-      count: 1,
+      count: 10,
     },
 
     // { normalName: "", displayName: "", description: "" },
