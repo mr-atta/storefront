@@ -17,9 +17,9 @@ const Products = (props) => {
   // const { counter, selected } = props;
 
   const handelAddToCard = (i, ele) => {
-    console.log(props.counter.products[i].productName);
+    console.log(props.counter.selectedProducts[i].productName);
 
-    // console.log(i + "  " + ele);
+    console.log(i + "  " + ele.count); // ele >>> the spesefic prodect data
     props.addToCart(ele);
     props.reduceCount(ele);
     // props.selected(props.counter.products[i].productName);
@@ -65,6 +65,6 @@ const mapStateToProps = (state) => ({
   selected,
 });
 
-const mapDispatchToProps = { selected };
+const mapDispatchToProps = { selected, addToCart, reduceCount };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Products);

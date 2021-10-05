@@ -14,7 +14,10 @@ import "./css/header.css";
 function Header(props) {
   console.log(props.show);
 
-  const handleClick = () => {};
+  const handleClick = (e) => {
+    e.preventDefault();
+    props.show();
+  };
 
   return (
     <div id="header" role="presentation" onClick={handleClick}>
@@ -37,12 +40,7 @@ function Header(props) {
             href="/getting-started/installation/"
           >
             {/* <WhatshotIcon sx={{ mr: 0.5 }} fontSize="inherit" /> */}
-            <Button
-              color="inherit"
-              onClick={() => {
-                props.show();
-              }}
-            >
+            <Button color="inherit" onClick={handleClick}>
               CART({props.cart.length})
             </Button>
           </Link>
